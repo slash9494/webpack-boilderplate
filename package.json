@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack --mode=production"
+    "dev": "TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack-dev-server  --env development",
+    "build": "TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack --env production"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,17 @@
     "url": "https://github.com/slash9494/webpack-boilderplate/issues"
   },
   "homepage": "https://github.com/slash9494/webpack-boilderplate#readme",
-  "dependencies": {},
+  "dependencies": {
+    "styled-component": "^2.8.0"
+  },
   "devDependencies": {
+    "@types/node": "^17.0.14",
+    "@types/styled-components": "^5.1.21",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.7.2",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
     "eslint": "^8.8.0",
@@ -30,8 +37,11 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "prettier": "^2.5.1",
+    "stylelint": "^14.3.0",
     "terser-webpack-plugin": "^5.3.0",
     "ts-loader": "^9.2.6",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.5",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
